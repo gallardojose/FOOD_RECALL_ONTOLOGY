@@ -46,21 +46,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#classify_as -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#classify_as">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#classification"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#code_info -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#code_info">
@@ -456,6 +441,22 @@
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Canada -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Canada"/>
+    
+
+
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#classification"/>
+    </owl:NamedIndividual>
     
 
 

@@ -21,6 +21,199 @@
     
 
 
+    <!-- http://webprotege.stanford.edu/R76UCjlyLTQd1RrBZWLR8Xx -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R76UCjlyLTQd1RrBZWLR8Xx">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCKTiIiNzxkuMw0snc6IbFl"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>age</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7l3czpCKJ4xx3deOFrsweY -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R7l3czpCKJ4xx3deOFrsweY">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>date_started</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8AmUQ4Mn0LQFXipwrhnMYv -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R8AmUQ4Mn0LQFXipwrhnMYv">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>report_number</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8g2ShUtmFY7nF4WcKCYcJa -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R8g2ShUtmFY7nF4WcKCYcJa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>industry_name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9o2npYOmesLg9yVaOM6saU -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R9o2npYOmesLg9yVaOM6saU">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RCKTiIiNzxkuMw0snc6IbFl"/>
+        <rdfs:label>corresponding_consumer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9rIddylPS3K1rF9DXNgAXs -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R9rIddylPS3K1rF9DXNgAXs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>date_created</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBeSCwk2nkpZOhoe4REHLai -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RBeSCwk2nkpZOhoe4REHLai">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd"/>
+        <rdfs:label>has_reactions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBxtmiZ5KoMBEgGnMlSDhko -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RBxtmiZ5KoMBEgGnMlSDhko">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCoQzrzpqOF3DF5WZsTjFNJ -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RCoQzrzpqOF3DF5WZsTjFNJ">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RCgNbmW65PIaCGoCp3024gf"/>
+        <rdfs:label>has_outcomes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDT6GRx23z8GK2dhb560Rmy -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RDT6GRx23z8GK2dhb560Rmy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCKTiIiNzxkuMw0snc6IbFl"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>age_unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RfDTSKmYG0dxfFrgU8p7Nt -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RfDTSKmYG0dxfFrgU8p7Nt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>industry_code</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RqASoni51pkbWH70nPOd7z -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RqASoni51pkbWH70nPOd7z">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCKTiIiNzxkuMw0snc6IbFl"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>gender</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RtZyCYRYpnf2rU5EIKuhAx -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RtZyCYRYpnf2rU5EIKuhAx">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label>name_brand</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#in_location -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#in_location">
@@ -103,6 +296,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#has_product">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
     </owl:ObjectProperty>
@@ -333,6 +527,38 @@
     
 
 
+    <!-- http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd">
+        <rdfs:label>reactions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCKTiIiNzxkuMw0snc6IbFl -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCKTiIiNzxkuMw0snc6IbFl">
+        <rdfs:label>consumer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCgNbmW65PIaCGoCp3024gf -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCgNbmW65PIaCGoCp3024gf">
+        <rdfs:label>outcomes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx">
+        <rdfs:label>food_event</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city">
@@ -351,7 +577,9 @@
 
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
@@ -393,7 +621,9 @@
 
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
+    </owl:Class>
     
 
 
@@ -426,21 +656,99 @@
     
 
 
+    <!-- http://webprotege.stanford.edu/R5eQgJTsEWHvH0h8fZQwNk -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R5eQgJTsEWHvH0h8fZQwNk">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd"/>
+        <rdfs:label>LOSS_OF_CONSCIOUSNESS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8r1IcKFrfRqkmWvmBIshdu -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8r1IcKFrfRqkmWvmBIshdu">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd"/>
+        <rdfs:label>BLOOD_POTASSIUM_DECREASE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9fPYQlwfKfuc5O4Pxo7zWu -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9fPYQlwfKfuc5O4Pxo7zWu">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RCgNbmW65PIaCGoCp3024gf"/>
+        <rdfs:label>Other_Seriousness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9hb9yyks66MgTLOIOiNa7b -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9hb9yyks66MgTLOIOiNa7b">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd"/>
+        <rdfs:label>SYNCOPE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBXK66l5Lm8Ex5ndWx1CaAB -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBXK66l5Lm8Ex5ndWx1CaAB">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd"/>
+        <rdfs:label>HYPOKALAEMIA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCT6QIpzfFX53Nd9x5Kxksy -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCT6QIpzfFX53Nd9x5Kxksy">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd"/>
+        <rdfs:label>DEHYDRATION</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RVj1gaJJA5JFMdYowQJls1 -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RVj1gaJJA5JFMdYowQJls1">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RB6nkbFM4Cz5S5cFWxzK8wd"/>
+        <rdfs:label>RASH_PRURITIC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RgzyXCJ6bG7bUaDk48eUpy -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RgzyXCJ6bG7bUaDk48eUpy">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RCgNbmW65PIaCGoCp3024gf"/>
+        <rdfs:label>Hospitalization</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Albuquerque -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Albuquerque"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Albuquerque">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CA -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CA"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Canada -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Canada"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Canada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country"/>
+    </owl:NamedIndividual>
     
 
 
@@ -470,7 +778,9 @@
 
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Fullerton -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Fullerton"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Fullerton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city"/>
+    </owl:NamedIndividual>
     
 
 
@@ -492,7 +802,9 @@
 
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NM -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NM"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state"/>
+    </owl:NamedIndividual>
     
 
 
@@ -514,7 +826,9 @@
 
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#United_States -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#United_States"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#United_States">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country"/>
+    </owl:NamedIndividual>
     
 
 

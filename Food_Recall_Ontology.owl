@@ -209,7 +209,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:range>
-        <rdfs:label>name_brand</rdfs:label>
+        <rdfs:label>product_name</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -333,21 +333,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#more_code_info">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product_description -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product_description">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
         <rdfs:range>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>

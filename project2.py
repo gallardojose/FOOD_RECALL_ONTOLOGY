@@ -7,4 +7,3 @@ with open("food-enforcement-0001-of-0001.json") as file:
     
 with open("food-event-0001-of-0001.json") as file:
     food_event = json.load(file)
-

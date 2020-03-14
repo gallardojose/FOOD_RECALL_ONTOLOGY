@@ -554,6 +554,7 @@
     <!-- http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#event"/>
         <rdfs:label>food_event</rdfs:label>
     </owl:Class>
     
@@ -572,6 +573,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#event"/>
     
 
 
@@ -622,7 +629,7 @@
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCzYCkzvOZ5RsWX0L1WFOZx"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#event"/>
     </owl:Class>
     
 

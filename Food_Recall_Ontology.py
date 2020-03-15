@@ -220,10 +220,11 @@ def addNamedIndividuals():
     add product to product list to check against (repeated name_brand)
     add any remaining recalls to owl file 
     '''
+    reaction_id = 1
+    outcome_id = 1
     recall_id = 1
     mishap_id = 1
     consumer_id = 1
-    outcome_id = 1
     name_brand_names = {}
     classifications = {}
     firms = {}
@@ -255,12 +256,23 @@ def addNamedIndividuals():
                         name_brand_names.append(product["name_brand"])
                     recall_index += 1
         # add consumer
-
+        writeNamedIndividual(str(consumer_id), "consumer", [],
+                             [("age", event["consumer"]["age"], "positiveInteger"),
+                              ("age_unit", event["consumer"]["age_unit"], "string"),
+                              ("gender", event["consumer"]["gender"], "string")])
         # add outcome
         writeNamedIndividual(str(outcome_id), "outcomes", [], [])
         # add food mishap
-        writeNamedIndividual()
+        writeNamedIndividual(str(mishap_id), "food_mishap",
+                             [("corresponding_consumer", str(consumer_id)), ("has_outcome", str(outcome_id)),
+                              ("has_product", product["name_brand"]), ("has_reaction", str(reaction_id))],
+                             [("date_created", event["date_created"], "positiveInteger"),
+                              ("date_started", event["date_started"], "positiveInteger"),
+                              ("report_number", event["report_number"], "positiveInteger")])
+        consumer_id += 1
         outcome_id += 1
+        reaction_id += 1
+        mishap_id += 1
         break
 
     

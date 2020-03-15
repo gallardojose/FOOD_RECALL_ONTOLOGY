@@ -223,6 +223,7 @@ def addNamedIndividuals():
     recall_id = 1
     mishap_id = 1
     consumer_id = 1
+    outcome_id = 1
     name_brand_names = {}
     classifications = {}
     firms = {}
@@ -247,14 +248,19 @@ def addNamedIndividuals():
                             firms[recall["recalling_firm"]] = 1
 
                         # add recall to ontology
-                        writeNamedIndividual(str(recall_id), "food_recall", [("classify_as", recall["classification"]), ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"])])
+                        writeNamedIndividual(str(recall_id), "food_recall", [("classify_as", recall["classification"]), ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("more_code_info", recall["more_code_info"], "string"), ("postal_code", recall["postal_code"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
+                        recall_id += 1
+
                         del food_recall["results"][recall_index]
                         name_brand_names.append(product["name_brand"])
                     recall_index += 1
         # add consumer
 
+        # add outcome
+        writeNamedIndividual(str(outcome_id), "outcomes", [], [])
         # add food mishap
         writeNamedIndividual()
+        outcome_id += 1
         break
 
     

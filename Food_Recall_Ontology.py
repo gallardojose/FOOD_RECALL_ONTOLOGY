@@ -165,13 +165,6 @@ def addDataProperties():
     writeDataProperty("termination_date", "product", "positiveInteger");
     writeDataProperty("voluntary_mandated", "food_recall", "string");
 
-    
-
-
-
-
-
-
 
 def writeNamedIndividual(individual, classType, objectAssertions, dataAssertions):
     string = "\n\t";
@@ -191,12 +184,19 @@ def writeNamedIndividual(individual, classType, objectAssertions, dataAssertions
     f.write(string);
 
 
-
-
-
-
-
-
+def compare_strings(str1, str2):
+    str1_list = [word for word in str1.split()]
+    str2_list = [word for word in str2.split()]
+    in_string = 0
+    # word match
+    for word in str1_list:
+        if word in str2_list:
+            in_string += 1
+    # return word match percentage and length of name_brand
+    if len(str1_list) > 0:
+        return in_string/len(str1_list), len(str1_list)
+    else:
+        return 0, 0
 
 
 def addNamedIndividuals():
@@ -212,6 +212,50 @@ def addNamedIndividuals():
     '''
     
     #writeNamedIndividual("Alice", "consumer", [("has_reactions","FOOD_ALLERGY") ]  , [("age", 43, "positiveInteger"), ("gender", "male", "string")]);
+
+    ''' 
+    iterate through event file
+    check against recalls for similar product description to name_brand
+    add similar recall and products to owl, delete recalls from dictionary
+    add product to product list to check against (repeated name_brand)
+    add any remaining recalls to owl file 
+    '''
+    recall_id = 1
+    mishap_id = 1
+    consumer_id = 1
+    name_brand_names = {}
+    classifications = {}
+    firms = {}
+    for event in food_event["results"]:
+        for product in event["products"]:
+            if product["name_brand"] not in name_brand_names:
+                # add product to ontology first so it can be referenced by recall and mishap
+                writeNamedIndividual(product["name_brand"], "product", [], [("product_name", product["name_brand"], "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
+                name_brand_names[product["name_brand"]] = 1
+                recall_index = 0
+                for recall in food_recall["results"]:
+                    compared_strings = compare_strings(product["name_brand"], recall["product_description"])
+                    if compared_strings[0] == 1 and compared_strings[1] > 1:
+
+                        # add recall and corresponding properties to owl / delete from dictionary
+                        if recall["classification"] not in classifications:
+                            writeNamedIndividual(recall["classification"], "classification", [], [])
+                            classifications[recall["classification"]] = 1
+
+                        if recall["recalling_firm"] not in firms:
+                            writeNamedIndividual(recall["recalling_firm"], "firm", [], [])
+                            firms[recall["recalling_firm"]] = 1
+
+                        # add recall to ontology
+                        writeNamedIndividual(str(recall_id), "food_recall", [("classify_as", recall["classification"]), ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"])])
+                        del food_recall["results"][recall_index]
+                        name_brand_names.append(product["name_brand"])
+                    recall_index += 1
+        # add consumer
+
+        # add food mishap
+        writeNamedIndividual()
+        break
 
     
     return
@@ -233,9 +277,6 @@ with open("food-enforcement-0001-of-0001.json") as file:
     
 with open("food-event-0001-of-0001.json") as file:
     food_event = json.load(file)
-
-
-
 
 
 f = open("./Food_Recall.owl", "w");

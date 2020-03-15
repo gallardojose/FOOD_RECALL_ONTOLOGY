@@ -42,10 +42,10 @@ def compare_strings(str1, str2):
 
 # read the json files into python dictionaries
 with open("food-enforcement-0001-of-0001.json") as file:
-    food_recall = json.load(file)
+    food_recall = dict(json.load(file))
 
 with open("food-event-0001-of-0001.json") as file:
-    food_event = json.load(file)
+    food_event = dict(json.load(file))
 
 # added mishaps and recalls
 added = open("added.txt", "w")
@@ -56,26 +56,47 @@ added = open("added.txt", "w")
 # add product to product list to check against (repeated name_brand)
 # add any remaining recalls to owl file
 
-name_brand_names = []
+id = 1
 i = 0
+name_brand_names = []
+# recalls = [recall for recall in food_recall["results"]]
 for event in food_event["results"]:
-    print(event["date_started"])
-    name_brand_names.append(event["date_started"])
-    if not name_brand_names[0]:
-        print("true")
-    print(name_brand_names[0])
-    break
     for product in event["products"]:
         if product["name_brand"] not in name_brand_names:
+            recall_index = 0
             for recall in food_recall["results"]:
-                if compare_strings(product["name_brand"], recall["product_description"])[0] == 1 and \
-                        compare_strings(product["name_brand"], recall["product_description"])[1] > 1:
-                            # add recall to owl
+                compared_strings = compare_strings(product["name_brand"], recall["product_description"])
+                if compared_strings[0] == 1 and compared_strings[1] > 1:
+                    # add recall to owl / delete from dictionary
+                    writeNamedIndividual()
+                    del food_recall["results"][recall_index]
+                    name_brand_names.append(product["name_brand"])
+                recall_index += 1
+        # add food mishap
+        writeNamedIndividual()
 
-                            name_brand_names.append(product["name_brand"])
-                            i += 1
+
+
     # add food mishap
-    # add_food_mishap(event, added)
+    # writeNamedIndividual()
 
+# name_brand_names = []
+# for event_key in food_event["results"]:
+#     for product_key in food_event["results"][event_key]["products"].keys():
+#         if food_event["results"][event_key]["products"][product_key]["name_brand"] not in name_brand_names:
+#             for recall_key in food_recall["results"].keys():
+#                 compare_results = compare_strings(food_event["results"][event_key]["products"][product_key]["name_brand"],
+#                                                   food_recall["results"][recall_key]["product_description"])[0] == 1
+#                 if compare_results[0] == 1 and compare_results[1] > 1:
+#                     # add recall to owl / delete from dictionary
+#                     # writeNamedIndividual()
+#                     del food_recall["results"][recall_key]
+#                     if not food_recall["results"][recall_key]:
+#                         print("true")
+#                     name_brand_names.append(food_event["results"][event_key]["products"][product_key]["name_brand"])
+#     # add food mishap
+#     # add_food_mishap(event, added)
+
+#  if event["date_started"]:
 
 print(i)

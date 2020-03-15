@@ -6,7 +6,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:webprotege="http://webprotege.stanford.edu/">
+     xmlns:webprotege="http://webprotege.stanford.edu/"
+     xmlns:Food_Recalltt="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall"/>
     
 
@@ -35,6 +36,7 @@
         </rdfs:range>
         <rdfs:label>age</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://webprotege.stanford.edu/R7l3czpCKJ4xx3deOFrsweY -->
@@ -850,9 +852,7 @@
 
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1">
-        <webprotege:R76UCjlyLTQd1RrBZWLR8Xx rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1"/>
     
 
 
@@ -868,6 +868,20 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#100741">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/food_mishap"/>
+        <Food_Recalltt:event_id rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#155"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#155 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#155">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#event_id"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/food_mishap"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 

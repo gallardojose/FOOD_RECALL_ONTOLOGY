@@ -229,7 +229,7 @@ def writeNamedIndividual(individual, classType, objectAssertions, dataAssertions
 
 
 
-def addNamedIndividuals():
+def addNamedIndividuals(uri):
     '''
     #JOSE NEEDS TO FILL THIS IN (POPULATE DATA)
     
@@ -273,7 +273,7 @@ start_file("Food_Recall");
 addClasses("Food_Recall");
 addObjectProperties("Food_Recall");
 addDataProperties("Food_Recall");
-addNamedIndividuals();
+addNamedIndividuals("Food_Recall");
 end_file();
 f.close();
 

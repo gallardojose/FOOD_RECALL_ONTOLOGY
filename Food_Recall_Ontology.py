@@ -257,7 +257,7 @@ def addNamedIndividuals():
         writeNamedIndividual(str(consumer_id), "consumer", [], [("age", event["consumer"]["age"], "positiveInteger"), ("age_unit", event["consumer"]["age_unit"], "string"), ("gender", event["consumer"]["gender"], "string")])
 
         # add food mishap
-        writeNamedIndividual(str(mishap_id), "food_mishap", [("corresponding_consumer", str(consumer_id)), ("has_outcome", str(outcome_id)), ("has_product", product["name_brand"]), ("has_reaction", str(reaction_id))], [("date_created", event["date_created"], "positiveInteger"), ("date_started", event["date_started"], positiveInteger), ("report_number", event["report_number"], positiveInteger)])
+        writeNamedIndividual(str(mishap_id), "food_mishap", [("corresponding_consumer", str(consumer_id)), ("has_outcome", str(outcome_id)), ("has_product", product["name_brand"]), ("has_reaction", str(reaction_id))], [("date_created", event["date_created"], "positiveInteger"), ("date_started", event["date_started"], "positiveInteger"), ("report_number", event["report_number"], positiveInteger)])
         consumer_id += 1
         outcome_id += 1
         reaction_id += 1

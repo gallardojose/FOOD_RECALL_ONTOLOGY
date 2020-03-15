@@ -55,24 +55,28 @@ def writeClass(name, subClassOf):
     
 
 def addClasses():
-    writeClass("consumer", None);
-    writeClass("food_mishap", "food_event");
-    writeClass("outcomes", None);
-    writeClass("reactions", None);
-    writeClass("city", "location");
-    writeClass("country", "location");
-    writeClass("food_event", None);
-    writeClass("country", "location");
-    writeClass("postal_code", "location");
-    writeClass("state", "location");
     writeClass("address", "location");
-    writeClass("country", "location");
+    writeClass("city", "location");
+    writeClass("class_i", "classification");
+    writeClass("class_ii", "classification");
+    writeClass("class_iii", "classification");
     writeClass("classification", None);
+    writeClass("completed", "status");
+    writeClass("consumer", None);
+    writeClass("country", "location");
     writeClass("firm", None);
+    writeClass("food_event", None);
+    writeClass("food_mishap", "food_event");
     writeClass("food_recall", "food_event");
-    writeClass("notification_method", None);
+    writeClass("location", None);
+    writeClass("ongoing", "status");
+    writeClass("outcomes", None);
+    writeClass("postal_code", "location");
     writeClass("product", None);
+    writeClass("reactions", None);
+    writeClass("state", "location");
     writeClass("status", None);
+    writeClass("terminated", "status");
 
 
 
@@ -109,11 +113,10 @@ def writeObjectProperty(name, domain, rang):
 def addObjectProperties():
     writeObjectProperty("corresponding_consumer", "food_mishap", "consumer");
     writeObjectProperty("current_status", "product", "status");
-    writeObjectProperty("has_outcomes", "food_mishap", "outcomes");
+    writeObjectProperty("has_outcome", "food_mishap", "outcomes");
     writeObjectProperty("has_product", "food_event", "product");
-    writeObjectProperty("has_reactions", "food_mishap", "reactions");
-    writeObjectProperty("in_location", "food_recall", "location");
-    writeObjectProperty("initial_firm_notification", "food_recall", "notification_method");
+    writeObjectProperty("has_reaction", "food_mishap", "reactions");
+    writeObjectProperty("classify_as", "food_recall", "classification");
     writeObjectProperty("recalling_firm", "food_recall", "firm");
 
 
@@ -131,6 +134,12 @@ def writeDataProperty(name, domain, rang):
     f.write(string);
 
 def addDataProperties():
+    writeDataProperty("address", "food_recall", "string");
+    writeDataProperty("city", "food_recall", "string");
+    writeDataProperty("country", "food_recall", "string");
+    writeDataProperty("postal_code", "food_recall", "string");
+    writeDataProperty("state", "food_recall", "string");
+    writeDataProperty("initial_firm_notification", "food_recall", "string");
     writeDataProperty("age", "consumer", "positiveInteger");
     writeDataProperty("age_unit", "consumer", "string");
     writeDataProperty("center_classification_date", "classification", "positiveInteger");
@@ -140,21 +149,19 @@ def addDataProperties():
     writeDataProperty("distribution_pattern", "product", "string");
     writeDataProperty("event_id", "food_recall", "positiveInteger");
     writeDataProperty("gender", "consumer", "string");
-    writeDataProperty("house_number", "address", "positiveInteger");
     writeDataProperty("industry_code", "product", "positiveInteger");
     writeDataProperty("industry_name", "product", "string");
     writeDataProperty("more_code_info", "food_recall", "string");
     writeDataProperty("product_description", "product", "string");
     writeDataProperty("product_name", "product", "string");
-    writeDataProperty("product_quantity", "product",  "positiveInteger");
+    writeDataProperty("product_quantity", "product",  "string");
     writeDataProperty("product_type", "product",  "string");
     writeDataProperty("reason", "food_recall",  "string");
     writeDataProperty("recall_initialization_date",  "food_recall",  "positiveInteger");
-    writeDataProperty("recall_number", "food_recall", "positiveInteger");
+    writeDataProperty("recall_number", "food_recall", "string");
     writeDataProperty("report_date", "food_recall", "positiveInteger");
     writeDataProperty("report_number", "food_mishap", "positiveInteger");
     writeDataProperty("role", "product", "string");
-    writeDataProperty("street_name", "address", "string");
     writeDataProperty("termination_date", "product", "positiveInteger");
     writeDataProperty("voluntary_mandated", "food_recall", "string");
 
@@ -241,6 +248,4 @@ end_file();
 f.close();
 
 print("Done");
-
-
 

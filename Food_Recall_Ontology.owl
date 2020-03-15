@@ -56,12 +56,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#in_location -->
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classify_as -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#in_location">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classify_as">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#classification"/>
     </owl:ObjectProperty>
     
 
@@ -117,6 +117,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#address">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#age -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#age">
@@ -147,9 +157,29 @@
     
 
 
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#code_info -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#code_info">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -247,6 +277,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#postal_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#postal_code">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_description -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_description">
@@ -332,6 +372,16 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#role">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -507,105 +557,11 @@
     
 
 
-    <!-- http://webprotege.stanford.edu/R5eQgJTsEWHvH0h8fZQwNk -->
-
-    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R5eQgJTsEWHvH0h8fZQwNk">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/reactions"/>
-        <rdfs:label>LOSS_OF_CONSCIOUSNESS</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://webprotege.stanford.edu/R9fPYQlwfKfuc5O4Pxo7zWu -->
-
-    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9fPYQlwfKfuc5O4Pxo7zWu">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/outcomes"/>
-        <rdfs:label>Other_Seriousness</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://webprotege.stanford.edu/R9hb9yyks66MgTLOIOiNa7b -->
-
-    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9hb9yyks66MgTLOIOiNa7b">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/reactions"/>
-        <rdfs:label>SYNCOPE</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RBXK66l5Lm8Ex5ndWx1CaAB -->
-
-    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBXK66l5Lm8Ex5ndWx1CaAB">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/reactions"/>
-        <rdfs:label>HYPOKALAEMIA</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RCT6QIpzfFX53Nd9x5Kxksy -->
-
-    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCT6QIpzfFX53Nd9x5Kxksy">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/reactions"/>
-        <rdfs:label>DEHYDRATION</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RVj1gaJJA5JFMdYowQJls1 -->
-
-    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RVj1gaJJA5JFMdYowQJls1">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/reactions"/>
-        <rdfs:label>RASH_PRURITIC</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RgzyXCJ6bG7bUaDk48eUpy -->
-
-    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RgzyXCJ6bG7bUaDk48eUpy">
-        <rdf:type rdf:resource="http://webprotege.stanford.edu/outcomes"/>
-        <rdfs:label>Hospitalization</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Albuquerque -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Albuquerque">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CA -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Canada -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Canada">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_I -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_I">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#classification"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_II -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_II">
         <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#classification"/>
+        <center_classification_date rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20120926</center_classification_date>
     </owl:NamedIndividual>
     
 
@@ -622,56 +578,54 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#F-2396-2012">
         <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
+        <classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class_II"/>
         <Food_Recalltt:has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Seasoned_Clams"/>
         <Food_Recalltt:initial_firm_notification rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Email"/>
         <Food_Recalltt:recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#M_&amp;_K_Trading_Inc"/>
+        <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">748 S Alameda St</address>
+        <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles</city>
         <code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">not available.</code_info>
+        <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
         <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">63150</event_id>
+        <postal_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90021-1616</postal_code>
         <reason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M &amp; K Trading is recalling Korean Molluscan Shellfish because the product has been prepared, packed, or held under insanitary conditions whereby it may have become contaminated with filth, or whereby it may have been rendered injurious to health.</reason>
         <recall_initialization_date rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20120921</recall_initialization_date>
         <recall_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F-2396-2012</recall_number>
         <report_date rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20121003</report_date>
+        <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
         <voluntary_mandated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voluntary: Firm Initiated</voluntary_mandated>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Fullerton -->
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Fullerton">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/outcomes"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Houdini_Inc. -->
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Other_Seriousness -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Houdini_Inc.">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#firm"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Other_Seriousness">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/outcomes"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Letter -->
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#RASH_PRURITIC -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Letter">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#notification_method"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#RASH_PRURITIC">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/reactions"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NM -->
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SYNCOPE -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Ongoing -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Ongoing">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#status"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SYNCOPE">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/reactions"/>
     </owl:NamedIndividual>
     
 
@@ -681,6 +635,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Seasoned_Clams">
         <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
         <Food_Recalltt:current_status rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Terminated"/>
+        <distribution_patterns rdf:datatype="http://www.w3.org/2001/XMLSchema#string">California</distribution_patterns>
         <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seasoned Clams, 240 grams</product_description>
         <product_quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">39</product_quantity>
         <termination_date rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20120926</termination_date>
@@ -696,20 +651,42 @@
     
 
 
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#United_States -->
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMIN_C_1000MG -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#United_States">
-        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMIN_C_1000MG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
+        <industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
+        <industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
+        <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VITAMIN C 1000MG</product_name>
+        <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONCOMITANT</role>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#bob -->
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer_1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#bob">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer_1">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/consumer"/>
-        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">22</age>
-        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">78</age>
+        <age_unit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year(s)</age_unit>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#100741 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#100741">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/food_mishap"/>
+        <webprotege:R9o2npYOmesLg9yVaOM6saU rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer_1"/>
+        <webprotege:RBeSCwk2nkpZOhoe4REHLai rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#RASH_PRURITIC"/>
+        <webprotege:RBeSCwk2nkpZOhoe4REHLai rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SYNCOPE"/>
+        <webprotege:RCoQzrzpqOF3DF5WZsTjFNJ rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization"/>
+        <webprotege:RCoQzrzpqOF3DF5WZsTjFNJ rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Other_Seriousness"/>
+        <Food_Recalltt:has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMIN_C_1000MG"/>
+        <Food_Recalltt:has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NATURE&apos;S_BOUNTY_LUTEIN_40MG"/>
+        <date_created rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20080227</date_created>
+        <report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">100741</report_number>
     </owl:NamedIndividual>
     
 

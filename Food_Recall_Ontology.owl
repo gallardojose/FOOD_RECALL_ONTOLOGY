@@ -618,6 +618,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#F-2396-2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#F-2396-2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#food_recall"/>
+        <Food_Recalltt:has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Seasoned_Clams"/>
+        <Food_Recalltt:initial_firm_notification rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Email"/>
+        <Food_Recalltt:recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#M_&amp;_K_Trading_Inc"/>
+        <code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">not available.</code_info>
+        <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">63150</event_id>
+        <reason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M &amp; K Trading is recalling Korean Molluscan Shellfish because the product has been prepared, packed, or held under insanitary conditions whereby it may have become contaminated with filth, or whereby it may have been rendered injurious to health.</reason>
+        <recall_initialization_date rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20120921</recall_initialization_date>
+        <recall_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F-2396-2012</recall_number>
+        <report_date rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20121003</report_date>
+        <voluntary_mandated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voluntary: Firm Initiated</voluntary_mandated>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Fullerton -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Fullerton">
@@ -658,6 +676,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Seasoned_Clams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Seasoned_Clams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
+        <Food_Recalltt:current_status rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Terminated"/>
+        <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seasoned Clams, 240 grams</product_description>
+        <product_quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">39</product_quantity>
+        <termination_date rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20120926</termination_date>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Terminated -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Terminated">
@@ -684,9 +714,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#M_&amp;_K_Trading_Inc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#M_&amp;_K_Trading_Inc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#firm"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NATURE&apos;S_BOUNTY_LUTEIN_40MG -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NATURE&apos;S_BOUNTY_LUTEIN_40MG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recalltt#product"/>
         <industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
         <industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
         <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NATURE&apos;S BOUNTY LUTEIN 40MG</product_name>

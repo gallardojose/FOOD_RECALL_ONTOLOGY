@@ -224,6 +224,7 @@ def addNamedIndividuals():
     name_brand_names = {}
     classifications = {}
     firms = {}
+    recall_list = food_recall["results"]
     for event in food_event["results"]:
         event_products = []
         for product in event["products"]:
@@ -233,10 +234,9 @@ def addNamedIndividuals():
                 writeNamedIndividual(product["name_brand"], "product", [], [("product_name", product["name_brand"], "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
                 name_brand_names[product["name_brand"]] = 1
                 recall_index = 0
-                for recall in food_recall["results"]:
+                for recall in recall_list:
                     compared_strings = compare_strings(product["name_brand"], recall["product_description"])
                     if compared_strings[0] == 1 and compared_strings[1] > 1:
-
                         # add recall and corresponding properties to owl / delete from dictionary
                         if recall["classification"] not in classifications:
                             writeNamedIndividual(recall["classification"], "classification", [], [])
@@ -249,7 +249,7 @@ def addNamedIndividuals():
                         # add recall to ontology
                         writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]) if recall["classification"] else "", ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
 
-                        del food_recall["results"][recall_index]
+                        recall_list.pop(recall_index)
                     recall_index += 1
 
         # add consumer

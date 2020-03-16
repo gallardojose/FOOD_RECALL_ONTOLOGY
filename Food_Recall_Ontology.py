@@ -225,7 +225,9 @@ def addNamedIndividuals():
     classifications = {}
     firms = {}
     for event in food_event["results"]:
+        event_products = []
         for product in event["products"]:
+            event_products.append(product["name_brand"])
             if product["name_brand"] not in name_brand_names:
                 # add product to ontology first so it can be referenced by recall and mishap
                 writeNamedIndividual(product["name_brand"], "product", [], [("product_name", product["name_brand"], "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
@@ -256,8 +258,10 @@ def addNamedIndividuals():
                              [("age", event["consumer"]["age"], "positiveInteger"),
                               ("age_unit", event["consumer"]["age_unit"], "string"),
                               ("gender", event["consumer"]["gender"], "string")])
-        mishap_object_array = [("corresponding_consumer", str(consumer_id)),
-                              ("has_product", product["name_brand"])]
+        mishap_object_array = [("corresponding_consumer", str(consumer_id))]
+        # add products 
+        for product in event_products:
+            mishap_object_array.append(("has_product", product))
         # add outcomes
         for outcome in event["outcomes"]:
             writeNamedIndividual(outcome, "outcomes", [], [])

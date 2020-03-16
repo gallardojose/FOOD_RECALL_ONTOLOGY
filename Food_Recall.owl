@@ -372,7 +372,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reaction"/>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#100741">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
 		<corresponding_consumer rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CALCIUM"/>

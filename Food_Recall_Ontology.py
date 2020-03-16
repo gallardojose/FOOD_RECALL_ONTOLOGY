@@ -199,6 +199,16 @@ def compare_strings(str1, str2):
     else:
         return 0, 0
 
+def remove_special_chars(s):
+    s2 = ""
+    for char in s:
+        if not char.isalpha() and not char.isdigit():
+            s2 = s2 + " "
+        else:
+            s2 += char
+
+    return s2
+
 
 def addNamedIndividuals():
     '''
@@ -220,76 +230,81 @@ def addNamedIndividuals():
     add similar recall and products to owl, delete recalls from dictionary
     add product to product list to check against (repeated name_brand)
     '''
+    i = 0
     consumer_id = 1
     name_brand_names = {}
     classifications = {}
     firms = {}
     recall_list = food_recall["results"]
     for event in food_event["results"]:
-        event_products = []
-        for product in event["products"]:
-            event_products.append(product["name_brand"])
-            if product["name_brand"] not in name_brand_names:
-                # add product to ontology first so it can be referenced by recall and mishap
-                try:
-                    writeNamedIndividual(product["name_brand"], "product", [], [("product_name", product["name_brand"], "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
-                except:
-                    print("")
-                name_brand_names[product["name_brand"]] = 1
-                recall_index = 0
-                for recall in recall_list:
-                    compared_strings = compare_strings(product["name_brand"], recall["product_description"])
-                    if compared_strings[0] == 1 and compared_strings[1] > 1:
-                        # add recall and corresponding properties to owl / delete from dictionary
-                        if recall["classification"] not in classifications:
-                            writeNamedIndividual(recall["classification"], "classification", [], [])
-                            classifications[recall["classification"]] = 1
+        if i < 50:
+            event_products = []
+            for product in event["products"]:
+                product_name_brand = remove_special_chars(str(product["name_brand"]))
+                event_products.append(product_name_brand)
+                if product_name_brand not in name_brand_names:
+                    # add product to ontology first so it can be referenced by recall and mishap
+                    try:
+                        writeNamedIndividual(product_name_brand, "product", [], [("product_name", product_name_brand, "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
+                    except:
+                        print("")
+                    name_brand_names[product_name_brand] = 1
+                    recall_index = 0
+                    for recall in recall_list:
+                        compared_strings = compare_strings(product_name_brand, recall["product_description"])
+                        if compared_strings[0] == 1 and compared_strings[1] > 1:
+                            # add recall and corresponding properties to owl / delete from dictionary
+                            if recall["classification"] not in classifications:
+                                writeNamedIndividual(recall["classification"], "classification", [], [])
+                                classifications[recall["classification"]] = 1
+                            recall_firm = remove_special_chars(recall["recalling_firm"])
+                            if recall_firm not in firms:
+                                writeNamedIndividual(recall_firm, "firm", [], [])
+                                firms[recall_firm] = 1
 
-                        if recall["recalling_firm"] not in firms:
-                            writeNamedIndividual(recall["recalling_firm"], "firm", [], [])
-                            firms[recall["recalling_firm"]] = 1
+                            # add recall to ontology
+                            try:
+                                writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]) if recall["classification"] else "", ("has_product", product_name_brand), ("recalling_firm", recall_firm)], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
+                            except:
+                                print("")
+                            recall_list.pop(recall_index)
+                        recall_index += 1
 
-                        # add recall to ontology
-                        try:
-                            writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]) if recall["classification"] else "", ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
-                        except:
-                            print("")
-                        recall_list.pop(recall_index)
-                    recall_index += 1
-
-        # add consumer
-        mishap_object_array = []
-        consumer_array = []
-        if not event["consumer"] == {}:
-            if "age" in event["consumer"].keys():
-                consumer_array.append(("age", event["consumer"]["age"], "positiveInteger"))
-            if "age_unit" in event["consumer"].keys():
-                consumer_array.append(("age_unit", event["consumer"]["age_unit"], "string"))
-            if "gender" in event["consumer"].keys():
-                consumer_array.append(("gender", event["consumer"]["gender"], "string"))
-            writeNamedIndividual(str(consumer_id), "consumer", [], consumer_array)
-            mishap_object_array.append(("corresponding_consumer", str(consumer_id)))
-            consumer_id += 1
-        # add products
-        for product in event_products:
-            mishap_object_array.append(("has_product", product))
-        # add outcomes
-        for outcome in event["outcomes"]:
-            writeNamedIndividual(outcome, "outcomes", [], [])
-            mishap_object_array.append(("has_outcome", outcome))
-        # add reactions
-        for reaction in event["reactions"]:
-            writeNamedIndividual(reaction, "reaction", [], [])
-            mishap_object_array.append(("has_reaction", reaction))
-        # add food mishap
-        try:
-            writeNamedIndividual(event["report_number"], "food_mishap",
-                                 mishap_object_array,
-                                 [("date_created", event["date_created"] , "positiveInteger") if event["date_created"] else "",
-                                  ("date_started", event["date_started"], "positiveInteger"),
-                                  ("report_number", event["report_number"], "positiveInteger")])
-        except:
-            print("")
+            # add consumer
+            mishap_object_array = []
+            consumer_array = []
+            if not event["consumer"] == {}:
+                if "age" in event["consumer"].keys():
+                    consumer_array.append(("age", event["consumer"]["age"], "positiveInteger"))
+                if "age_unit" in event["consumer"].keys():
+                    consumer_array.append(("age_unit", event["consumer"]["age_unit"], "string"))
+                if "gender" in event["consumer"].keys():
+                    consumer_array.append(("gender", event["consumer"]["gender"], "string"))
+                writeNamedIndividual(str(consumer_id), "consumer", [], consumer_array)
+                mishap_object_array.append(("corresponding_consumer", str(consumer_id)))
+                consumer_id += 1
+            # add products
+            for product in event_products:
+                mishap_object_array.append(("has_product", product))
+            # add outcomes
+            for outcome in event["outcomes"]:
+                writeNamedIndividual(outcome, "outcomes", [], [])
+                mishap_object_array.append(("has_outcome", outcome))
+            # add reactions
+            for reaction in event["reactions"]:
+                writeNamedIndividual(reaction, "reaction", [], [])
+                mishap_object_array.append(("has_reaction", reaction))
+            # add food mishap
+            try:
+                writeNamedIndividual(event["report_number"], "food_mishap",
+                                     mishap_object_array,
+                                     [("date_created", event["date_created"] , "positiveInteger") if event["date_created"] else "",
+                                      ("date_started", event["date_started"], "positiveInteger"),
+                                      ("report_number", event["report_number"], "positiveInteger")])
+            except:
+                print("")
+        
+        i += 1
 
 
     

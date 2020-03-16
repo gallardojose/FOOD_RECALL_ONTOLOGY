@@ -301,9 +301,9 @@
 		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	</owl:DatatypeProperty>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NATURE'S BOUNTY LUTEIN 40MG">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NATURE S BOUNTY LUTEIN 40MG">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NATURE'S BOUNTY LUTEIN 40MG</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NATURE S BOUNTY LUTEIN 40MG</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -317,9 +317,9 @@
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONCOMITANT</role>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMINS A-Z">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMINS A Z">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VITAMINS A-Z</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VITAMINS A Z</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONCOMITANT</role>
@@ -375,9 +375,9 @@
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#100741">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
 		<corresponding_consumer rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NATURE'S BOUNTY LUTEIN 40MG"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NATURE S BOUNTY LUTEIN 40MG"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMIN C 1000MG"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMINS A-Z"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMINS A Z"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CALCIUM"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Other Seriousness"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization"/>
@@ -557,9 +557,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">101645</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HARBOR BANKS (US FOOD SERVICE BRAND) FROZEN WILD MAHI MAHI CENTER-CUT FILLETS VACUUM PACKED15">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HARBOR BANKS  US FOOD SERVICE BRAND  FROZEN WILD MAHI MAHI CENTER CUT FILLETS VACUUM PACKED15">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HARBOR BANKS (US FOOD SERVICE BRAND) FROZEN WILD MAHI MAHI CENTER-CUT FILLETS VACUUM PACKED15</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HARBOR BANKS  US FOOD SERVICE BRAND  FROZEN WILD MAHI MAHI CENTER CUT FILLETS VACUUM PACKED15</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">16</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fishery/Seafood Prod</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -591,7 +591,7 @@
 
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#101698">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HARBOR BANKS (US FOOD SERVICE BRAND) FROZEN WILD MAHI MAHI CENTER-CUT FILLETS VACUUM PACKED15"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HARBOR BANKS  US FOOD SERVICE BRAND  FROZEN WILD MAHI MAHI CENTER CUT FILLETS VACUUM PACKED15"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Patient Visited ER"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Patient Visited Healthcare Provider"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#BODY TEMPERATURE INCREASED"/>
@@ -603,9 +603,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">101698</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DREYER'S FROZEN FRUIT BARS">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DREYER S FROZEN FRUIT BARS">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DREYER'S FROZEN FRUIT BARS</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DREYER S FROZEN FRUIT BARS</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">13</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ice Cream Prod</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -621,7 +621,7 @@
 
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#102051">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DREYER'S FROZEN FRUIT BARS"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DREYER S FROZEN FRUIT BARS"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DYSGEUSIA"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VOMITING"/>
 		<date_created rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20080405</date_created>
@@ -629,9 +629,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">102051</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SMUCKER'S APRICOT PRESERVES">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SMUCKER S APRICOT PRESERVES">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SMUCKER'S APRICOT PRESERVES</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SMUCKER S APRICOT PRESERVES</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">21</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fruit/Fruit Prod</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -703,7 +703,7 @@
 
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#101139">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SMUCKER'S APRICOT PRESERVES"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SMUCKER S APRICOT PRESERVES"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SARA LEE BREAD"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NESQUICK"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#COFFEE"/>
@@ -858,9 +858,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">101060</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#LAY'S LIGHT ORIGINAL POTATO CHIPS">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#LAY S LIGHT ORIGINAL POTATO CHIPS">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAY'S LIGHT ORIGINAL POTATO CHIPS</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAY S LIGHT ORIGINAL POTATO CHIPS</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Snack Food Item</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -880,7 +880,7 @@
 
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#102009">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#LAY'S LIGHT ORIGINAL POTATO CHIPS"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#LAY S LIGHT ORIGINAL POTATO CHIPS"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Patient Visited Healthcare Provider"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#ABDOMINAL PAIN"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DIARRHOEA"/>
@@ -901,7 +901,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc.">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc ">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#firm"/>
 	</owl:NamedIndividual>
 
@@ -909,7 +909,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON ACTIVIA"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -929,7 +929,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON ACTIVIA"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -949,7 +949,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON ACTIVIA"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -969,7 +969,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON ACTIVIA"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -989,7 +989,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON ACTIVIA"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1009,7 +1009,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON ACTIVIA"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1154,7 +1154,7 @@
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#The Dannon Company, Inc.">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#The Dannon Company  Inc ">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#firm"/>
 	</owl:NamedIndividual>
 
@@ -1162,7 +1162,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#The Dannon Company, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#The Dannon Company  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">120 White Plains Rd Ste 120</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tarrytown</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expiration codes: 24 SEP 2013 PS and 25 SEP 2013 PS</code_info>
@@ -1182,7 +1182,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1202,7 +1202,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1222,7 +1222,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1242,7 +1242,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1262,7 +1262,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1282,7 +1282,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1302,7 +1302,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1322,7 +1322,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1342,7 +1342,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1362,7 +1362,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1382,7 +1382,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1402,7 +1402,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1422,7 +1422,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DANNON YOGURT"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1451,9 +1451,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">102278</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CENTRUM MULTIVITAMIN MULTIMINERAL TABLET SUPPLEMENTENT (NEW FORMULA)">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CENTRUM MULTIVITAMIN MULTIMINERAL TABLET SUPPLEMENTENT  NEW FORMULA ">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CENTRUM MULTIVITAMIN MULTIMINERAL TABLET SUPPLEMENTENT (NEW FORMULA)</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CENTRUM MULTIVITAMIN MULTIMINERAL TABLET SUPPLEMENTENT  NEW FORMULA </product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -1489,7 +1489,7 @@
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#101623">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
 		<corresponding_consumer rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#5"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CENTRUM MULTIVITAMIN MULTIMINERAL TABLET SUPPLEMENTENT (NEW FORMULA)"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CENTRUM MULTIVITAMIN MULTIMINERAL TABLET SUPPLEMENTENT  NEW FORMULA "/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Patient Visited ER"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Other Seriousness"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization"/>
@@ -1613,7 +1613,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DOLE BANANA"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1633,7 +1633,7 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
 		<classify_as rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Class II"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DOLE BANANA"/>
-		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C S Wholesale Grocers, Inc."/>
+		<recalling_firm rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#C   S Wholesale Grocers  Inc "/>
 		<address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 Summit Lock Road</address>
 		<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westfield</city>
 		<code_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exact codes are unknown. The product being recalled was sold on June 17, 2019 at Target Stores in Commack, NY and Central Islip, NY.</code_info>
@@ -1672,9 +1672,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">101729</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#MARIETTA'S CHOCOLATE CREME COOKIES">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#MARIETTA S CHOCOLATE CREME COOKIES">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MARIETTA'S CHOCOLATE CREME COOKIES</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MARIETTA S CHOCOLATE CREME COOKIES</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bakery Prod/Dough/Mix/Icing</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -1714,7 +1714,7 @@
 
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#101880">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#MARIETTA'S CHOCOLATE CREME COOKIES"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#MARIETTA S CHOCOLATE CREME COOKIES"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Patient Visited Healthcare Provider"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CONSTIPATION"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CHANGE OF BOWEL HABIT"/>
@@ -1915,9 +1915,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">101845</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#WONDER BREAD 100% WHOLE WHEAT">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#WONDER BREAD 100  WHOLE WHEAT">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WONDER BREAD 100% WHOLE WHEAT</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WONDER BREAD 100  WHOLE WHEAT</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bakery Prod/Dough/Mix/Icing</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -1937,7 +1937,7 @@
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#102984">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
 		<corresponding_consumer rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#10"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#WONDER BREAD 100% WHOLE WHEAT"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#WONDER BREAD 100  WHOLE WHEAT"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HYPERSENSITIVITY"/>
 		<date_created rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20080504</date_created>
 		<date_started rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">None</date_started>
@@ -2019,9 +2019,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">100683</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#UNCLE AL'S PEANUT BUTTER CREAM COOKIES">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#UNCLE AL S PEANUT BUTTER CREAM COOKIES">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNCLE AL'S PEANUT BUTTER CREAM COOKIES</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNCLE AL S PEANUT BUTTER CREAM COOKIES</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bakery Prod/Dough/Mix/Icing</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -2037,7 +2037,7 @@
 
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#101059">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#UNCLE AL'S PEANUT BUTTER CREAM COOKIES"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#UNCLE AL S PEANUT BUTTER CREAM COOKIES"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SOMATOFORM DISORDER"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NAUSEA"/>
 		<date_created rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20080307</date_created>
@@ -2515,9 +2515,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">100504</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#AM-300">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#AM 300">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AM-300</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AM 300</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -2541,7 +2541,7 @@
 
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#100919">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#AM-300"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#AM 300"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Patient Visited ER"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#FEELING ABNORMAL"/>
@@ -2551,9 +2551,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">100919</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HI-TECH PHARMACEUTICALS LIPODRENE">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HI TECH PHARMACEUTICALS LIPODRENE">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HI-TECH PHARMACEUTICALS LIPODRENE</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HI TECH PHARMACEUTICALS LIPODRENE</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -2604,7 +2604,7 @@
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#101460">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
 		<corresponding_consumer rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#16"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HI-TECH PHARMACEUTICALS LIPODRENE"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HI TECH PHARMACEUTICALS LIPODRENE"/>
 		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#MULTIVITAMIN"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Medically Important"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SUDDEN HEARING LOSS"/>
@@ -2639,9 +2639,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">101303</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#ONE A DAY WOMEN'S 50 PLUS">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#ONE A DAY WOMEN S 50 PLUS">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ONE A DAY WOMEN'S 50 PLUS</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ONE A DAY WOMEN S 50 PLUS</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -2681,7 +2681,7 @@
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#101998">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
 		<corresponding_consumer rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#17"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#ONE A DAY WOMEN'S 50 PLUS"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#ONE A DAY WOMEN S 50 PLUS"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Other Seriousness"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HEART RATE INCREASED"/>
@@ -2822,9 +2822,9 @@
 		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">189869</report_number>
 	</owl:NamedIndividual>
 
-	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CENTRUM SILVER MEN'S 50+ (MULTIMINERALS, MULTIVITAMINS)TABLET">
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CENTRUM SILVER MEN S 50   MULTIMINERALS  MULTIVITAMINS TABLET">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CENTRUM SILVER MEN'S 50+ (MULTIMINERALS, MULTIVITAMINS)TABLET</product_name>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CENTRUM SILVER MEN S 50   MULTIMINERALS  MULTIVITAMINS TABLET</product_name>
 		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
 		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
 		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
@@ -2840,7 +2840,7 @@
 
 	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#192002">
 		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CENTRUM SILVER MEN'S 50+ (MULTIMINERALS, MULTIVITAMINS)TABLET"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CENTRUM SILVER MEN S 50   MULTIMINERALS  MULTIVITAMINS TABLET"/>
 		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Medically Important"/>
 		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#PROSTATE CANCER"/>
 		<date_created rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20151211</date_created>

@@ -1,4 +1,5 @@
 import json
+import io
 
 def start_file():
     string = "";
@@ -304,7 +305,7 @@ with open("food-event-0001-of-0001.json") as file:
     food_event = json.load(file)
 
 
-f = open("./Food_Recall.owl", "w");
+f = io.open("./Food_Recall.owl", "w", encoding="utf-8");
 start_file();
 addClasses();
 addObjectProperties();

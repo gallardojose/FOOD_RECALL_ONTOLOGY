@@ -261,9 +261,9 @@ def addNamedIndividuals():
         mishap_object_array = []
         consumer_array = []
         if not event["consumer"] == {}:
-            if "age" in event["consumer"].keys:
+            if "age" in event["consumer"].keys():
                 consumer_array.append(("age", event["consumer"]["age"], "positiveInteger"))
-            if "age_unit" in event["consumer"].keys:
+            if "age_unit" in event["consumer"].keys():
                 consumer_array.append(("age_unit", event["consumer"]["age_unit"], "string"))
             if "gender" in event["consumer"].keys():
                 consumer_array.append(("gender", event["consumer"]["gender"], "string"))

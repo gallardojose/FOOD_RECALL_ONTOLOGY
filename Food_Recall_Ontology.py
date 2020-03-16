@@ -219,7 +219,6 @@ def addNamedIndividuals():
     check against recalls for similar product description to name_brand
     add similar recall and products to owl, delete recalls from dictionary
     add product to product list to check against (repeated name_brand)
-    add any remaining recalls to owl file 
     '''
     consumer_id = 1
     name_brand_names = {}
@@ -232,7 +231,10 @@ def addNamedIndividuals():
             event_products.append(product["name_brand"])
             if product["name_brand"] not in name_brand_names:
                 # add product to ontology first so it can be referenced by recall and mishap
-                writeNamedIndividual(product["name_brand"], "product", [], [("product_name", product["name_brand"], "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
+                try:
+                    writeNamedIndividual(product["name_brand"], "product", [], [("product_name", product["name_brand"], "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
+                except:
+                    print("")
                 name_brand_names[product["name_brand"]] = 1
                 recall_index = 0
                 for recall in recall_list:
@@ -248,8 +250,10 @@ def addNamedIndividuals():
                             firms[recall["recalling_firm"]] = 1
 
                         # add recall to ontology
-                        writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]) if recall["classification"] else "", ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
-
+                        try:
+                            writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]) if recall["classification"] else "", ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
+                        except:
+                            print("")
                         recall_list.pop(recall_index)
                     recall_index += 1
 
@@ -257,8 +261,10 @@ def addNamedIndividuals():
         mishap_object_array = []
         consumer_array = []
         if not event["consumer"] == {}:
-            consumer_array.append(("age", event["consumer"]["age"], "positiveInteger"))
-            consumer_array.append(("age_unit", event["consumer"]["age_unit"], "string"))
+            if "age" in event["consumer"].keys:
+                consumer_array.append(("age", event["consumer"]["age"], "positiveInteger"))
+            if "age_unit" in event["consumer"].keys:
+                consumer_array.append(("age_unit", event["consumer"]["age_unit"], "string"))
             if "gender" in event["consumer"].keys():
                 consumer_array.append(("gender", event["consumer"]["gender"], "string"))
             writeNamedIndividual(str(consumer_id), "consumer", [], consumer_array)
@@ -276,11 +282,14 @@ def addNamedIndividuals():
             writeNamedIndividual(reaction, "reaction", [], [])
             mishap_object_array.append(("has_reaction", reaction))
         # add food mishap
-        writeNamedIndividual(event["report_number"], "food_mishap",
-                             mishap_object_array,
-                             [("date_created", event["date_created"] , "positiveInteger") if event["date_created"] else "",
-                              ("date_started", event["date_started"], "positiveInteger"),
-                              ("report_number", event["report_number"], "positiveInteger")])
+        try:
+            writeNamedIndividual(event["report_number"], "food_mishap",
+                                 mishap_object_array,
+                                 [("date_created", event["date_created"] , "positiveInteger") if event["date_created"] else "",
+                                  ("date_started", event["date_started"], "positiveInteger"),
+                                  ("report_number", event["report_number"], "positiveInteger")])
+        except:
+            print("")
 
 
     

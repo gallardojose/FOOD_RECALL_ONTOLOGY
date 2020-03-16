@@ -247,19 +247,23 @@ def addNamedIndividuals():
                             firms[recall["recalling_firm"]] = 1
 
                         # add recall to ontology
-                        writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]), ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("more_code_info", recall["more_code_info"], "string"), ("postal_code", recall["postal_code"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
+                        writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]) if recall["classification"] else "", ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
 
                         del food_recall["results"][recall_index]
-                        name_brand_names.append(product["name_brand"])
                     recall_index += 1
-                    break
+
         # add consumer
-        writeNamedIndividual(str(consumer_id), "consumer", [],
-                             [("age", event["consumer"]["age"], "positiveInteger"),
-                              ("age_unit", event["consumer"]["age_unit"], "string"),
-                              ("gender", event["consumer"]["gender"], "string")])
-        mishap_object_array = [("corresponding_consumer", str(consumer_id))]
-        # add products 
+        mishap_object_array = []
+        consumer_array = []
+        if not event["consumer"] == {}:
+            consumer_array.append(("age", event["consumer"]["age"], "positiveInteger"))
+            consumer_array.append(("age_unit", event["consumer"]["age_unit"], "string"))
+            if "gender" in event["consumer"].keys():
+                consumer_array.append(("gender", event["consumer"]["gender"], "string"))
+            writeNamedIndividual(str(consumer_id), "consumer", [], consumer_array)
+            mishap_object_array.append(("corresponding_consumer", str(consumer_id)))
+            consumer_id += 1
+        # add products
         for product in event_products:
             mishap_object_array.append(("has_product", product))
         # add outcomes
@@ -273,11 +277,10 @@ def addNamedIndividuals():
         # add food mishap
         writeNamedIndividual(event["report_number"], "food_mishap",
                              mishap_object_array,
-                             [("date_created", event["date_created"], "positiveInteger"),
+                             [("date_created", event["date_created"] , "positiveInteger") if event["date_created"] else "",
                               ("date_started", event["date_started"], "positiveInteger"),
                               ("report_number", event["report_number"], "positiveInteger")])
-        consumer_id += 1
-        break
+
 
     
     return

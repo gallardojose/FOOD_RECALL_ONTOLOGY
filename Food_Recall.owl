@@ -1,577 +1,391 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#"
-     xml:base="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:Food_Recall="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall"/>
-    
+	xml:base="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:Food_Recall="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#">
+	<owl:Ontology rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall"/>
 
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#address">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
+	</owl:Class>
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
+	</owl:Class>
 
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classify_as -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classify_as">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#corresponding_consumer -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#corresponding_consumer">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#current_status -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#current_status">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_outcome -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_outcome">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#outcomes"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_product -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_product">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_reaction -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_reaction">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reactions"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recalling_firm -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recalling_firm">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#firm"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#address -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#address">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#age -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#age">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#age_unit -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#age_unit">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#center_classification_date -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#center_classification_date">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#code_info -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#code_info">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#date_created -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#date_created">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#date_started -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#date_started">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#distribution_pattern -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#distribution_pattern">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#event_id -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#event_id">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#gender -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#gender">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#industry_code -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#industry_code">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#industry_name -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#industry_name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#initial_firm_notification -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#initial_firm_notification">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#more_code_info -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#more_code_info">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#postal_code -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#postal_code">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_description -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_description">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_name -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_quantity -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_quantity">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_type -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_type">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reason -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reason">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recall_initialization_date -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recall_initialization_date">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recall_number -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recall_number">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#report_date -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#report_date">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#report_number -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#report_number">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#role -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#role">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#termination_date -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#termination_date">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#voluntary_mandated -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#voluntary_mandated">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#address -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#address">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_i -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_i">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_ii -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_ii">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_iii -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_iii">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#completed -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#completed">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#firm -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#firm"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#ongoing -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#ongoing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#outcomes -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#outcomes"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#postal_code -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#postal_code">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reactions -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reactions"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
-    
-
-
-    <!-- http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#terminated -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#terminated">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
-    </owl:Class>
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_i">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_ii">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#class_iii">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#completed">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#firm"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#ongoing">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#outcomes"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#postal_code">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reactions"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#location"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
+
+	<owl:Class rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#terminated">
+    	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
+	</owl:Class>
+
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#corresponding_consumer">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
+		<rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#current_status">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#status"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_outcome">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
+		<rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#outcomes"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_product">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_event"/>
+		<rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#has_reaction">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
+		<rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reactions"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classify_as">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recalling_firm">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#firm"/>
+	</owl:ObjectProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#address">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#city">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#country">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#postal_code">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#state">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#initial_firm_notification">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#age">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#age_unit">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#center_classification_date">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#classification"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#code_info">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#date_created">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#date_started">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#distribution_pattern">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#event_id">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#gender">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#industry_code">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#industry_name">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#more_code_info">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_description">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_name">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_quantity">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product_type">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reason">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recall_initialization_date">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#recall_number">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#report_date">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#report_number">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#role">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#termination_date">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#voluntary_mandated">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+		<rdfs:domain rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_recall"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#NATURE'S BOUNTY LUTEIN 40MG">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NATURE'S BOUNTY LUTEIN 40MG</product_name>
+		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
+		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
+		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUSPECT</role>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMIN C 1000MG">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VITAMIN C 1000MG</product_name>
+		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
+		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
+		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONCOMITANT</role>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#VITAMINS A-Z">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VITAMINS A-Z</product_name>
+		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
+		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
+		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONCOMITANT</role>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CALCIUM">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#product"/>
+		<product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CALCIUM</product_name>
+		<industry_code rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">54</industry_code>
+		<industry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vit/Min/Prot/Unconv Diet(Human/Animal)</industry_name>
+		<role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONCOMITANT</role>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#consumer"/>
+		<age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">78</age>
+		<age_unit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year(s)</age_unit>
+		<gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Other Seriousness">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#outcomes"/>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#outcomes"/>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SYNCOPE">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reaction"/>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#RASH PRURITIC">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reaction"/>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#BLOOD POTASSIUM DECREASED">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reaction"/>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DEHYDRATION">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reaction"/>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HYPOKALAEMIA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reaction"/>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#LOSS OF CONSCIOUSNESS">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#reaction"/>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1">
+		<rdf:type rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#food_mishap"/>
+		<corresponding_consumer rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#1"/>
+		<has_product rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#CALCIUM"/>
+		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Other Seriousness"/>
+		<has_outcome rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#Hospitalization"/>
+		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#SYNCOPE"/>
+		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#RASH PRURITIC"/>
+		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#BLOOD POTASSIUM DECREASED"/>
+		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#DEHYDRATION"/>
+		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#HYPOKALAEMIA"/>
+		<has_reaction rdf:resource="http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#LOSS OF CONSCIOUSNESS"/>
+		<date_created rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">20080227</date_created>
+		<date_started rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">None</date_started>
+		<report_number rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">100741</report_number>
+	</owl:NamedIndividual>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-

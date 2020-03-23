@@ -56,28 +56,14 @@ def writeClass(name, subClassOf):
     
 
 def addClasses():
-    writeClass("address", "location");
-    writeClass("city", "location");
-    writeClass("class_i", "classification");
-    writeClass("class_ii", "classification");
-    writeClass("class_iii", "classification");
-    writeClass("classification", None);
-    writeClass("completed", "status");
     writeClass("consumer", None);
-    writeClass("country", "location");
     writeClass("firm", None);
     writeClass("food_event", None);
     writeClass("food_mishap", "food_event");
     writeClass("food_recall", "food_event");
-    writeClass("location", None);
-    writeClass("ongoing", "status");
-    writeClass("outcomes", None);
-    writeClass("postal_code", "location");
+    writeClass("outcome", None);
     writeClass("product", None);
-    writeClass("reactions", None);
-    writeClass("state", "location");
-    writeClass("status", None);
-    writeClass("terminated", "status");
+    writeClass("reaction", None);
 
 
 
@@ -113,10 +99,9 @@ def writeObjectProperty(name, domain, rang):
 
 def addObjectProperties():
     writeObjectProperty("corresponding_consumer", "food_mishap", "consumer");
-    writeObjectProperty("current_status", "product", "status");
-    writeObjectProperty("has_outcome", "food_mishap", "outcomes");
+    writeObjectProperty("has_outcome", "food_mishap", "outcome");
     writeObjectProperty("has_product", "food_event", "product");
-    writeObjectProperty("has_reaction", "food_mishap", "reactions");
+    writeObjectProperty("has_reaction", "food_mishap", "reaction");
     writeObjectProperty("classify_as", "food_recall", "classification");
     writeObjectProperty("recalling_firm", "food_recall", "firm");
 
@@ -154,7 +139,7 @@ def addDataProperties():
     writeDataProperty("industry_name", "product", "string");
     writeDataProperty("more_code_info", "food_recall", "string");
     writeDataProperty("product_description", "product", "string");
-    writeDataProperty("product_name", "product", "string");
+    writeDataProperty("product_brand_name", "product", "string");
     writeDataProperty("product_quantity", "product",  "string");
     writeDataProperty("product_type", "product",  "string");
     writeDataProperty("reason", "food_recall",  "string");
@@ -169,20 +154,28 @@ def addDataProperties():
 
 def writeNamedIndividual(individual, classType, objectAssertions, dataAssertions):
     string = "\n\t";
-    string += "<owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#"+individual+"\">\n";
-    string += "\t\t<rdf:type rdf:resource=\"http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#"+classType+"\"/>\n";
-    
-    if(objectAssertions != None):
-        for item in objectAssertions:
-            string += "\t\t<"+item[0]+" rdf:resource=\"http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#"+item[1]+"\"/>\n";
-    if(dataAssertions != None):
-        for item in dataAssertions:
-            string += "\t\t<"+item[0]+ " rdf:datatype=\"http://www.w3.org/2001/XMLSchema#"+ item[2] +"\">"+str(item[1])+"</"+item[0]+">\n"
-            
-   
-    string += "\t</owl:NamedIndividual>";
-    string += "\n";
-    f.write(string);
+    individual_1 = remove_special_chars(individual)
+    if individual_1[1]:
+        string += "<owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#"+individual_1[0]+"\">\n";
+        string += "\t\t<rdf:type rdf:resource=\"http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#"+classType+"\"/>\n";
+
+        if(objectAssertions != None):
+            for item in objectAssertions:
+                item_1 = remove_special_chars(item[1])
+                if item_1[1]:
+                    string += "\t\t<"+item[0]+" rdf:resource=\"http://www.semanticweb.org/owner/ontologies/2020/2/Food_Recall#"+item_1[0]+"\"/>\n";
+        if(dataAssertions != None):
+            for item in dataAssertions:
+                item_1 = remove_special_chars(item[1])
+                if item_1[1]:
+                    string += "\t\t<"+item[0]+ " rdf:datatype=\"http://www.w3.org/2001/XMLSchema#"+ item[2] +"\">"+str(item_1[0])+"</"+item[0]+">\n"
+
+
+        string += "\t</owl:NamedIndividual>";
+        string += "\n";
+        f.write(string);
+    else:
+        pass
 
 
 def compare_strings(str1, str2):
@@ -201,13 +194,15 @@ def compare_strings(str1, str2):
 
 def remove_special_chars(s):
     s2 = ""
+    char_exists = False
     for char in s:
         if not char.isalpha() and not char.isdigit():
             s2 = s2 + " "
         else:
             s2 += char
+            char_exists = True
 
-    return s2
+    return s2, char_exists
 
 
 def addNamedIndividuals():
@@ -240,33 +235,32 @@ def addNamedIndividuals():
         if i < 50:
             event_products = []
             for product in event["products"]:
-                product_name_brand = remove_special_chars(str(product["name_brand"]))
-                event_products.append(product_name_brand)
-                if product_name_brand not in name_brand_names:
+                event_products.append(product["name_brand"])
+                if product["name_brand"] not in name_brand_names:
                     # add product to ontology first so it can be referenced by recall and mishap
+                    # consider removing industry code
                     try:
-                        writeNamedIndividual(product_name_brand, "product", [], [("product_name", product_name_brand, "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
+                        writeNamedIndividual(product["name_brand"], "product", [], [("product_brand_name", product["name_brand"], "string"), ("industry_code", product["industry_code"], "positiveInteger"), ("industry_name", product["industry_name"], "string"), ("role", product["role"], "string")])
                     except:
-                        print("")
-                    name_brand_names[product_name_brand] = 1
+                        pass
+                    name_brand_names[product["name_brand"]] = 1
                     recall_index = 0
                     for recall in recall_list:
-                        compared_strings = compare_strings(product_name_brand, recall["product_description"])
+                        compared_strings = compare_strings(product["name_brand"], recall["product_description"])
                         if compared_strings[0] == 1 and compared_strings[1] > 1:
                             # add recall and corresponding properties to owl / delete from dictionary
                             if recall["classification"] not in classifications:
                                 writeNamedIndividual(recall["classification"], "classification", [], [])
                                 classifications[recall["classification"]] = 1
-                            recall_firm = remove_special_chars(recall["recalling_firm"])
-                            if recall_firm not in firms:
-                                writeNamedIndividual(recall_firm, "firm", [], [])
-                                firms[recall_firm] = 1
+                            if recall["recalling_firm"] not in firms:
+                                writeNamedIndividual(recall["recalling_firm"], "firm", [], [])
+                                firms[recall["recalling_firm"]] = 1
 
                             # add recall to ontology
                             try:
-                                writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]) if recall["classification"] else "", ("has_product", product_name_brand), ("recalling_firm", recall_firm)], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
+                                writeNamedIndividual(recall["recall_number"], "food_recall", [("classify_as", recall["classification"]) if recall["classification"] else "", ("has_product", product["name_brand"]), ("recalling_firm", recall["recalling_firm"])], [("address", recall["address_1"], "string"), ("city", recall["city"], "string"), ("code_info", recall["code_info"], "string"), ("country", recall["country"], "string"), ("event_id", recall["event_id"], "positiveInteger"), ("initial_firm_notifaction", recall["initial_firm_notification"], "string"), ("postal_code", recall["postal_code"], "string"), ("reason", recall["reason_for_recall"], "string"), ("recall_initialization_date", recall["recall_initiation_date"], "positiveInteger"), ("recall_number", recall["recall_number"], "string"), ("report_date", recall["report_date"], "positiveInteger"), ("state", recall["state"], "string"), ("voluntary_mandated", recall["voluntary_mandated"], "string")])
                             except:
-                                print("")
+                                pass
                             recall_list.pop(recall_index)
                         recall_index += 1
 
@@ -288,7 +282,7 @@ def addNamedIndividuals():
                 mishap_object_array.append(("has_product", product))
             # add outcomes
             for outcome in event["outcomes"]:
-                writeNamedIndividual(outcome, "outcomes", [], [])
+                writeNamedIndividual(outcome, "outcome", [], [])
                 mishap_object_array.append(("has_outcome", outcome))
             # add reactions
             for reaction in event["reactions"]:
@@ -302,12 +296,9 @@ def addNamedIndividuals():
                                       ("date_started", event["date_started"], "positiveInteger"),
                                       ("report_number", event["report_number"], "positiveInteger")])
             except:
-                print("")
-        
+                pass
         i += 1
 
-
-    
     return
 
 
@@ -329,7 +320,7 @@ with open("food-event-0001-of-0001.json") as file:
     food_event = json.load(file)
 
 
-f = io.open("./Food_Recall.owl", "w", encoding="utf-8");
+f = io.open("./Food_Recall_Short.owl", "w", encoding="utf-8");
 start_file();
 addClasses();
 addObjectProperties();

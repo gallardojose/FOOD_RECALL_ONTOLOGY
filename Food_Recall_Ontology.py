@@ -197,7 +197,7 @@ def remove_special_chars(s):
     char_exists = False
     for char in s:
         if not char.isalpha() and not char.isdigit():
-            s2 = s2 + " "
+            s2 = s2 + "_"
         else:
             s2 += char
             char_exists = True
